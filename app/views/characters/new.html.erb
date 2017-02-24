@@ -1,4 +1,8 @@
 <h2> Create a new person to die </h2>
 <%= render "form" %>
 
+<%= form_for @character, method: :create do |f| %>
+<%= f.submit "Create" %>
+<% end %>
+
 <h2><%= link_to "New Character", new_character_path, method: :new %> </h2>

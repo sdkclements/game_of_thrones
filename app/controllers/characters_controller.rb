@@ -1,4 +1,4 @@
-class CharacterController < ApplicationController
+class CharactersController < ApplicationController
   def index
   	@characters = Character.all
   end
@@ -12,9 +12,12 @@ class CharacterController < ApplicationController
   end
 
   def new
-  	@character = Character.create!(params[:character])
-    redirect_to character_path
+  	@character = Character.new  
   end
+  def create
+    @character = Character.create!(params[:character])
+  end
+
   def update
     @character = Character.update(params[:character])
     redirect_to character_path
