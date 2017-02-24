@@ -12,7 +12,12 @@ class CharacterController < ApplicationController
   end
 
   def new
-  	@character = Character.create(params[:character])
+  	@character = Character.create!(params[:character])
+    redirect_to character_path
+  end
+  def update
+    @character = Character.update(params[:character])
+    redirect_to character_path
   end
 
   def destroy
