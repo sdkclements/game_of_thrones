@@ -9,10 +9,15 @@ class CharacterController < ApplicationController
 
   def edit
   	@character = Character.find(params[:id])
-  	@house = Character.find(params[:house_id])
   end
 
   def new
   	@character = Character.create(params[:character])
+  end
+
+  def destroy
+  @character = Character.find(params[:id])
+  @character.destroy
+  redirect_to :root
   end
 end

@@ -1,2 +1,7 @@
 <h1>Character#show</h1>
+<%= link_to "Edit This Character", edit_character_path(@character) %>
+<h1><%= @character.name %></h1>
+<h2><%= @character.house.name %></h2>
+<h2> Am i alive ? <%= @character.alive %>  </h2>
+
 <p>Find me in app/views/character/show.html.erb</p>

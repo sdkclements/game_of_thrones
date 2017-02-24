@@ -7,6 +7,10 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <nav>
+  	<%= link_to "Houses", house_index_path %>
+  	<%= link_to "Characters", character_index_path %>
+  </nav>
 
   <body>
     <%= yield %>
